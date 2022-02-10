@@ -1,0 +1,48 @@
+<div class="login-status-header">
+    <!-- <ul *ngIf="!invalidlogin" class="login-status-user-info">
+        <li class="nav-item">
+            <a class="nav-link" (click)="logout()" href="#">Logoff</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+        </li>
+    </ul>
+
+    <ul *ngIf="invalidlogin" class="nav navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/register">Sign Up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
+        </li>
+    </ul> -->
+
+    <!-- <div>
+         Welcome back {{ userFullName }}! -->
+    <!-- <button *ngIf="invalidlogin" (click)="logout()" class="security-btn">sign out</button> -->
+
+    <!-- <button *ngIf="!invalidlogin" routerLink="/order-history" class="security-btn ml-1">Orders</button> -->
+
+
+    <!-- <button *ngIf="isinvalidlogin" routerLink="/login" class="security-btn">sign in</button>
+        <button *ngIf="!isinvalidlogin" (click)="logout()" class="security-btn">sign out</button>
+        <button *ngIf="!isinvalidlogin" routerLink="/order-history" class="security-btn ml-1">Orders</button> -->
+    <!-- <button *ngIf="invalidlogin" routerLink="/register" class="security-btn">sign up</button> -->
+    <!-- </div>  -->
+
+    <div class="dropdown show">
+        <button class="dropdown-toggle security-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            login links
+        </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <!-- <button class="dropdown-item" href="/login">Sign in</a>
+          <a class="dropdown-item" href="/">Another action</a>
+          <a class="dropdown-item" href="/order-history">Order</a> -->
+            <a *ngIf="isinvalidlogin" href="/login" class="dropdown-item" style="color: blue; background-color: burlywood;">sign in</a>
+            <a *ngIf="isinvalidlogin" (click)="logout()" class="dropdown-item" style="color: blue;background-color:bisque">sign out</a>
+            <!-- <a *ngIf="isinvalidlogin" href="/order-history" class="dropdown-item" style="color: blue;background-color: burlywood;">Orders</a> -->
+        </div>
+    </div>
+</div>

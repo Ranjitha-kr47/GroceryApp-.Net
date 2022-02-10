@@ -1,0 +1,55 @@
+<hr><br>
+<div class="detail-section">
+    <div class="container-fluid">
+
+        <div class="row">
+
+
+            <!-- master details for product -->
+            <div class="col-lg-9">
+
+                <div class="row">
+
+                    <!-- To display the image -->
+                    <div class="col-12 col-md-4">
+
+                        <div class="thumbnail">
+                            <img src="{{products[0].image_Url}}" width="250" height="300" alt="product" />
+                        </div>
+
+                    </div>
+
+                    <!-- To display the book info -->
+                    <div class="col-12 col-md-8">
+
+                        <h3>{{products[0].name}}</h3>
+                        <hr />
+
+                        <p>{{products[0].description}}</p>
+                        <hr />
+
+                        <h4>Price: <strong>{{products[0].unit_Price | currency: 'INR'}}</strong></h4>
+                        <hr />
+
+                        <h6>Qty. Available: {{products[0].units_In_Stock}}</h6>
+                        <hr />
+
+                        <a routerLink="/products" class="btn btn-success " style="background-color: #610a4c;">
+                            <i class="fa fa-arrow-left"></i>
+                            Back
+                        </a>
+
+                        <button (click)="addToCart()" class="btn btn-primary ml-1" style="background-color: #610a4c;">
+                            <i class="fa fa-cart-arrow-down"></i>
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br>

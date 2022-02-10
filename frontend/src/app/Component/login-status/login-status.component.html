@@ -1,0 +1,60 @@
+<div class="main-content" style="background-color:bisque;">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="container">
+                <h1 id="h1">Registration Form</h1>
+                <form #userForm="ngForm" (ngSubmit)="onFormSubmit()">
+
+
+                    <div class="form-group">
+                        <label for="" id="lbl">Firstname</label>
+                        <input type="text" #firstName="ngModel" [(ngModel)]="register.firstName" name="firstName"
+                            class="form-control" placeholder="Enter the firstname"
+                            [class.is-invalid]="firstName.invalid && firstName.touched" required />
+                        <small class="text-danger" [class.d-none]="firstName.untouched ||firstName.valid">This is
+                            require
+                            field</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" id="lbl">Lastname</label>
+                        <input type="text" #lastName="ngModel" [(ngModel)]="register.lastName" name="lastName"
+                            class="form-control" placeholder="Enter the lastname"
+                            [class.is-invalid]="lastName.invalid && lastName.touched" required />
+                        <small class="text-danger" [class.d-none]="lastName.untouched ||lastName.valid">This is require
+                            field</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" id="lbl">Email</label>
+                        <input type="email" #email="ngModel" [(ngModel)]="register.Email" name="email"
+                            class="form-control" placeholder="Enter email"
+                            [class.is-invalid]="email.invalid && email.touched" required />
+                        <small class="text-danger" [class.d-none]="email.untouched ||email.valid">This is require
+                            field</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" id="lbl">Password</label>
+                        <input type="password" #password="ngModel" [(ngModel)]="register.Password" name="password"
+                            class="form-control" placeholder="Enter password"
+                            [class.is-invalid]="password.invalid && password.touched" required />
+                        <small class="text-danger" [class.d-none]="password.untouched ||password.valid">This is require
+                            field</small>
+                    </div>
+
+
+
+                    <div>
+                        <input type="submit" value="Register" class="btn btn-primary btn-md"
+                            style="background-color: #610a4c" />
+                            <input type="submit" value="sign in" class="btn btn-primary btn-md float-right"
+                            style="background-color: #610a4c" routerLink ="/login"  />
+                        <!-- <button type="button" class="btn btn-primary btn-md" style="background-color: #610a4c"
+                            (click)="resetForm(userForm)">Reset</button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
